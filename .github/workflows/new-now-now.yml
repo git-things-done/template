@@ -1,0 +1,19 @@
+name: New “Now Now”
+on:
+  repository_dispatch:
+    types: new-now-now
+jobs:
+  parse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  #FIXME https://github.com/git-things-done/gtd/discussions/10
+
+      - run: echo "CURRENT=$(git show origin/gh-pages:CURRENT)" >> $GITHUB_ENV
+
+      - uses: git-things-done/new-now-now@master
+        with:
+          today: ${{ env.CURRENT }}
+          body: ${{ github.event.client_payload.body }}
+          token: ${{ secrets.GITHUB_TOKEN }}

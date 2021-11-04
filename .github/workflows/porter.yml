@@ -1,0 +1,61 @@
+name: Porter
+on:
+  workflow_dispatch:
+    # ^^ so you can run this workflow manually if you need to
+  schedule:
+    - cron: '57 7 * * *'
+    # ^^ change this so it occurs while you’re sleeping (the timezone is UTC)
+    # Syntax reference: https://crontab.guru
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # ^^ optionally you can set the `token` input for *every* action
+
+jobs:
+  porter:
+    runs-on: ubuntu-latest
+    outputs:
+      today: ${{ steps.data.outputs.today }}
+      yesterday: ${{ steps.data.outputs.yesterday }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  #FIXME https://github.com/git-things-done/gtd/discussions/10
+
+      - uses: git-things-done/porter@master
+        id: data
+
+      - uses: git-things-done/fortune@master
+      # ^^ a whimsical “fortune” every morning
+
+      - uses: git-things-done/now-now@master
+      # ^^ our pioneering TODO system
+      # ^^ see https://github.com/git-things-done/now-now
+
+      - uses: git-things-done/usher@master
+      # ^^ usher forward “sticky” comments
+
+  # MANDATORY STEP!!†
+  # 1. https://$USER.github.io/gtd/ redirects to today’s issue
+  # 2. A file called `CURRENT` exists in the `gh-pages` branch for other actions to use
+  #TODO needs to be part of git-things-done/porter
+  # † porter needs the `CURRENT` file
+  gh-pages:
+    runs-on: ubuntu-latest
+    needs: porter
+    steps:
+      - uses: DamianReeves/write-file-action@v1.0
+        with:
+          path: public/index.html
+          contents: |
+            <head>
+              <meta http-equiv="refresh" content="0; URL=https://github.com/${{ github.repository }}/issues/${{ needs.porter.outputs.today }}" />
+            </head>
+      - uses: DamianReeves/write-file-action@v1.0
+        with:
+          path: public/CURRENT
+          contents: ${{ needs.porter.outputs.today }}
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force_orphan: true

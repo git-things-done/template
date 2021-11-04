@@ -1,0 +1,29 @@
+name: Librarian
+on:
+  issue_comment:
+    types:
+      - created
+      - edited
+      - deleted
+jobs:
+  parse:
+    runs-on: ubuntu-latest
+    if: github.event.issue_comment.user.login != 'github-actions[bot]'
+    steps:
+      - uses: git-things-done/librarian@master
+        id: labels
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          today: ${{ github.event.issue.number }}
+
+      - uses: KeisukeYamashita/attach-labels@v1
+        if: ${{ steps.labels.outputs.append }}
+        with:
+          labels: ${{ steps.labels.outputs.append }}
+          number: ${{ github.event.issue.number }}
+
+      - uses: peter-murray/remove-labels-action@v1
+        if: ${{ steps.labels.outputs.remove }}
+        with:
+          labels: ${{ steps.labels.outputs.remove }}
+          issue_number: ${{ github.event.issue.number }}
