@@ -54,13 +54,22 @@ We provide the following:
 
 ## Getting Started
 
-* [Fork] this repo†
-* [Edit the templates](/templates/)
-* Wait for tomorrow‡
+1. **Do Not Fork**\
+  Unfortunately, GitHub do not allow you to make a private fork of a public
+  repository[^1].\
+  Instead use [`gh`][]:
+  ```sh
+  gh repo create gtd --private --template git-things-done/template
+  ```
+2. [Edit the templates](/templates/)
+3. Wait for tomorrow‡
 
-> † You probably want a *private* fork.\
 > ‡ If you can’t wait, [manually dispatch the porter](../../actions/workflows/porter.yml).
 
+[`gh`]: https://cli.github.com
+[^1]: If you work at GitHub could you perhaps consider allowing private forks
+  **for templates**. This is presumably useful in general and not just for us.
+  Thanks muchly bae 💜.
 
 # Detritus
 
