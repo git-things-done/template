@@ -19,17 +19,17 @@ jobs:
         with:
           fetch-depth: 0  #FIXME https://github.com/git-things-done/gtd/discussions/10
 
-      - uses: git-things-done/porter@master
+      - uses: git-things-done/porter@v1
         id: data
 
       - uses: git-things-done/fortune@v1
       # ^^ a whimsical “fortune” every morning
 
-      - uses: git-things-done/now-now@master
+      - uses: git-things-done/now-now@v1
       # ^^ our pioneering TODO system
       # ^^ see https://github.com/git-things-done/now-now
 
-      - uses: git-things-done/usher@master
+      - uses: git-things-done/usher@v1
       # ^^ usher forward “sticky” comments
 
   # MANDATORY STEP!!†

@@ -12,7 +12,7 @@ jobs:
 
       - run: echo "CURRENT=$(git show origin/gh-pages:CURRENT)" >> $GITHUB_ENV
 
-      - uses: git-things-done/new-now-now@master
+      - uses: git-things-done/new-now-now@v1
         with:
           today: ${{ env.CURRENT }}
           body: ${{ github.event.client_payload.body }}
