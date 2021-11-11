@@ -4,8 +4,9 @@ on:
     # ^^ so you can run this workflow manually if you need to
   schedule:
     - cron: '57 7 * * *'
-    # ^^ change this so it occurs while you’re sleeping (the timezone is UTC)
-    # Syntax reference: https://crontab.guru
+    # ^^ change this so this workflow runs while you sleep (it’s in UTC)
+    # - please also be nice to GitHub and pick a *random* minute
+    # - syntax reference: https://crontab.guru
 
 jobs:
   git-things-done:
