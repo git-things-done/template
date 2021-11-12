@@ -85,7 +85,7 @@ Suggestions and tips for using GitTD effectively
 * Try it out for a week
 * Start adding “[Sticky Comments](https://github.com/git-things-done/usher)”
 * Start editing the workflows to suit your usage
-* Add an ocassional:
+* Add an occasional:
   * Journal (How are you feeling?)
   * Audit (How’s life going? What needs changing?)
 * Publish any new stuff you make and buoy up the ecosystem
@@ -133,7 +133,8 @@ Thus we recommend using an iOS Shortcut that opens the URL as it solves
 both issues (iOS asks if you want to let the shortcut open GitHub a few times
 but stops after about 3).
 
-You can use [this Shortcuts.app shortcut][shortcut] that we already prepared for you.
+You can use [this Shortcuts.app shortcut][shortcut] that we already prepared for
+you.
 
 </details>
 
@@ -150,6 +151,18 @@ You can use [this Shortcuts.app shortcut][shortcut] that we already prepared for
 6. Consider a PR on our [Awesome List](https://github.com/git-things-done/awesome)
 
 > † For other variables you might need, check out the sources for [our actions](https://github.com/git-things-done).
+
+## Work in Your Fork
+
+It can be *fiddly* to develop GitHub Actions, so we suggest starting in your own
+fork and making the action *locally*:
+
+```
+- uses: ./my-gtd-action
+  ## ^^ will run $REPO_ROOT/my-gtd-action/action.yml
+```
+
+When it works move the code to its own *public* repo and publicize it.
 
 
 # More Like This?
