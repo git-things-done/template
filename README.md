@@ -14,6 +14,7 @@ GitHub *Issues*, GitHub *Actions*, GitHub *Pages* and GitHub *Flat Data*.
 Git Things Done is a **programmable**, **flexible**, **hackable** and **extensible**
 “Getting Things Done” system. Try it out and make it yours.
 
+![Screenshot](https://user-images.githubusercontent.com/58962/141682345-19eb1f49-6808-45f8-95e6-67ab3af971c8.png)
 
 ### 🚨 WARNING! 🚨
 
@@ -21,14 +22,11 @@ This is new software and definitely not mature!
 Error handling is bad!
 You may have to help fix things!
 
-
 ## How It Works
 
 Every morning [the porter][] creates a new ticket for the day from [a template][]
 you control. We suggest this template contains habits you aim to complete each
 day but that’s up to you.
-
-![Screenshot](https://user-images.githubusercontent.com/58962/140653223-0f41c652-e099-4ac2-a536-ff0f4b7d1298.png)
 
 Tick off the habits (or strike-them-out† if you couldn’t do them) and once they
 are all checked off the ticket is closed by our automation.
