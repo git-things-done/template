@@ -151,6 +151,28 @@ you.
 
 > † For other variables you might need, check out the sources for [our actions](https://github.com/git-things-done).
 
+## Branding
+
+Consistent GitTD branding assists user recognition:
+
+```yml
+# `action.yml`
+
+name: “Foo” for Git Things Done
+branding:
+  icon: check-square
+  color: green
+# …
+```
+
+We suggest setting your primary category in the GitHub Actions Marketplace to
+**Utilities**, but this is optional—choose whatever you feel is appropriate.
+
+> [Here’s a Marketplace example.](https://github.com/marketplace/actions/fortune-for-git-things-done)
+
+> **Please note**, to be added to our [Awesome List] your branding must be
+> match the above guidelines.
+
 ## Work in Your Fork
 
 It can be *fiddly* to develop GitHub Actions, so we suggest starting in your own
@@ -176,3 +198,4 @@ Want to make things like this with people who make things like this?
 [dependabot]: https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/keeping-your-actions-up-to-date-with-dependabot
 [shortcut]: https://www.icloud.com/shortcuts/25c9d874988d497f862d31fe5e587a96
 [a template]: /templates/quotidian.md
+[Awesome List]: https://github.com/git-things-done/awesome
