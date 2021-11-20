@@ -14,7 +14,8 @@ GitHub *Issues*, GitHub *Actions*, GitHub *Pages* and GitHub *Flat Data*.
 Git Things Done is a **programmable**, **flexible**, **hackable** and **extensible**
 “Getting Things Done” system. Try it out and make it yours.
 
-![Screenshot](https://user-images.githubusercontent.com/58962/141682345-19eb1f49-6808-45f8-95e6-67ab3af971c8.png)
+![Screenshot](https://user-images.githubusercontent.com/58962/142735824-d0fae666-5581-44d3-aaa8-ead40e0df4d4.png)
+
 
 ### 🚨 WARNING! 🚨
 
