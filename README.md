@@ -51,6 +51,10 @@ We provide the following:
 * A daily [fortune](https://github.com/git-things-done/fortune)
 * [The weather forecast](https://github.com/git-things-done/forecast)
 
+> [Browse our Awesome List for GitTD][Awesome List]
+
+> [Search for more GitTD actions on the GitHub Actions Marketplace](https://github.com/marketplace?type=actions&query=git+things+done)
+
 ## Getting Started
 
 1. **Do Not Fork**\
