@@ -50,11 +50,15 @@ We provide the following:
 * [A mechanism for making “sticky” comments](https://github.com/git-things-done/usher)
 * An automated [labeling bot](https://github.com/git-things-done/librarian) based on comment content
 * A daily [fortune](https://github.com/git-things-done/fortune)
-* [The weather forecast](https://github.com/git-things-done/forecast)
+* The [weather forecast](https://github.com/git-things-done/forecast)
 
 > [Browse our Awesome List for GitTD][Awesome List]
 
 > [Search for more GitTD actions on the GitHub Actions Marketplace](https://github.com/marketplace?type=actions&query=git+things+done)
+
+As a work in progress we also have:
+
+* A [weight tracker](https://github.com/git-things-done/scales)
 
 ## Getting Started
 
