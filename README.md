@@ -49,6 +49,7 @@ We provide the following:
 * An easy way to [add new tasks](https://github.com/git-things-done/new-now-now)
 * [A mechanism for making “sticky” comments](https://github.com/git-things-done/usher)
 * An automated [labeling bot](https://github.com/git-things-done/librarian) based on comment content
+* A [ferret](https://github.com/git-things-done/ferret) for fetching and maintaining on-going notes
 * A daily [fortune](https://github.com/git-things-done/fortune)
 * The [weather forecast](https://github.com/git-things-done/forecast)
 
