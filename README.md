@@ -124,6 +124,10 @@ Want a URL that goes straight to today’s entry? We got you covered.
 </summary>
 
 ## Bookmarkable URL
+  
+> NOTE this only works for private forks if you have GitHub Pro 😒.
+> Apparently it can work with a PAT, if so, please advise.
+> Either way we could use a general solution, so please ideate on the discussion board.
 
 We generate a HTML redirect to the latest ticket every day and make it the
 GitHub Pages for your GitTD repo.
