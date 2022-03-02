@@ -42,6 +42,10 @@ Habit tracking is the just the first part of GitTD, the rest is up to you.
 The beauty of Git Things Done is the *ecosystem*. Anyone can create actions
 so you can customize it to exactly what you need.
 
+Fundamentally GitTD is based on the principle of *pulling forward previous
+data as copies*. You always have a fresh copy, thus you have history and edits
+are both non-destructive and *progressive*.
+
 We provide the following:
 
 * A [powerful templating system][the porter] for creating daily entries
